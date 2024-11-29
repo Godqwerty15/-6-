@@ -12,31 +12,18 @@ module_a.py 코드 설명 및 실행 과정
 
    
 main.py 코드 설명 및 실행 과정
-1. 코드 개요
-이 코드는 2024학년도 수능 성적 데이터에서 특정 과목의 표준점수 분포를 시각화하는 프로그램이다. 사용자로부터 과목 이름을 입력받아 CSV 파일에서 데이터를 필터링하고, 선택된 과목의 남학생과 여학생의 분포를 비교하는 그래프를 생성한다.
-2. 코드 단계별 설명
-   2.1 모듈 및 라이브러리 불러오기
-     1. module_a 모듈 가져오기: 
-        import module_a
-     2. 데이터 처리 및 시각화 라이브러리 불러오기:
-        import pandas as pd
-        import matplotlib.pyplot as plt
-     3. 한글 폰트 설정:
-        from matplotlib import rc
-        rc('font', family='Malgun Gothic')
-        plt.rcParams['axes.unicode_minus'] = False
-    2.2 데이터 처리 및 사용자 입력
-      4. 사용자 입력
-         name = input("표준점수 분포를 볼 과목을 선택하세요: ")
-      5. CSV파일 읽기
-         data = pd.read_csv('20231231.csv', encoding='EUC-KR')
-      6. 선택된 과목 데이터 필터링
-         korean_data = data[data['유형'] == name]
-    2.3 그래프 시각화
-      7. 그래프 그리기
-        module_a.Graph_Drawing(korean_data['표준점수'], korean_data['남자'], korean_data['여자'], name)
-3. 실행 결과
-코드를 실행하면, 사용자 입력에 따라 선택한 과목의 표준점수 분포를 시각화한 그래프가 생성된다. 그래프에는 남학생과 여학생의 데이터가 각각 표시되며, 과목별 분포 차이를 시각적으로 확인할 수 있다.
 
-4. 활용방안
-이 프로그램은 선택 과목별 성적 분포를 비교하거나 분석하는 데 유용하다. 남학생과 여학생의 분포 차이를 한눈에 파악할 수 있어 데이터 분석 및 보고서 작성에 활용하기 적합하다.
+1. module_a 모듈을 가져오기
+사용자 정의 모듈 module_a를 import하여 그래프 생성 함수 사용한다.
+2. pandas, matplotlib 가져오기
+데이터 처리와 시각화를 위해 pandas와 matplotlib.pyplot을 import
+3. 한글 폰트 설정
+맑은 고딕 폰트를 설정하고, 음수 기호(-)가 제대로 표시되도록 설정한다.
+4. 사용자 입력 받기
+과목 이름을 입력 받아 name 변수에 저장한다.
+5. CSV 파일 읽기
+20231231.csv 파일을 읽어 데이터 프레임에 저장(EUC-KR 인코딩 사용함).
+6. 데이터 필터링
+입력받은 과목 이름(name)에 해당하는 데이터 필터링
+7. 그래프 시각화
+필터링된 데이터를 활용하여 남학생과 여학생의 표준점수 분포 그래프 생성.
