@@ -2,6 +2,7 @@
 ![image](https://github.com/user-attachments/assets/559a5941-42d5-49ad-8037-48472edd7f24)
 ![image](https://github.com/user-attachments/assets/fed69302-ad8f-4a61-a050-db4d77d897b7)
 ![image](https://github.com/user-attachments/assets/b34a6f87-3b78-4c8c-8fb0-b1d599f46b1c)
+
 module_a.py 코드 설명 및 실행 과정
 1. 그래프를 그려야 하므로 matplotlib.pyplot 을 plt로 import한다.
 2. 그래프의 크기를 가로 10, 세로 6으로 적당히 설정하고 plot으로 x축엔 표준점수, y축엔 각각 남자와 여자의 득점자 수를 담은 그래프를 따로 그리는 코드를 쓴다.
