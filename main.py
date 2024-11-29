@@ -6,4 +6,4 @@ rc('font', family='Malgun Gothic')
 plt.rcParams['axes.unicode_minus'] = False
 data = pd.read_csv('20231231.CSV', encoding = 'EUC-KR')
 korean_data = data[data['영역'] == '국어']
-yuntaek.Graph_Drawing(data['표준점수'],data['남자'],data['여자'])
+module_a.Graph_Drawing(data['표준점수'],data['남자'],data['여자'])
